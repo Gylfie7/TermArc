@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <title>TermArc - Toutes les pages</title>
   <style>
-    iframe {
-      width: 100%;
-      height: 600px; /* tu peux ajuster la hauteur */
-      border: 1px solid #ccc;
-      margin-bottom: 30px;
-    }
-  </style>
+  iframe {
+    width: auto;
+    border: 1px solid red; /* ou ta couleur préférée */
+    margin-bottom: auto;
+    height: auto; /* on laisse JS gérer la hauteur */
+  }
+</style>
+
 </head>
 <body>
   <h1>TermArc - Toutes les pages</h1>
@@ -19,4 +20,24 @@
   <iframe src="arcs.html" title="Arcs"></iframe>
   <iframe src="poignee.html" title="Poignée"></iframe>
   <iframe src="bracelet.html" title="Bracelet"></iframe>
-  <iframe src="stabilisateur-viseur.html" title="Stabilisateur viseu
+  <iframe src="stabilisateur-viseur.html" title="Stabilisateur viseur"></iframe>
+  <iframe src="corde.html" title="Corde"></iframe>
+  <iframe src="fausse-corde.html" title="Fausse-corde"></iframe>
+  <iframe src="dragonne.html" title="Dragonne"></iframe>
+  <iframe src="palette.html" title="Palette"></iframe>
+  <iframe src="empennage.html" title="Empennage"></iframe>
+  <iframe src="terrain.html" title="Terrain"></iframe>
+<script>
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'setHeight' && event.source) {
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {
+        if (iframe.contentWindow === event.source) {
+          iframe.style.height = event.data.height + 'px';
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
