@@ -48,20 +48,6 @@
     padding: 8px 0;
 }
 
-/*couleur du texte quand actif*/
-.region-item.region-corde a.is-active {
-    color: ; /* Orange */
-}
-.region-item.region-oeillet a.is-active {
-    color: #3498DB; /* Bleu */
-}
-.region-item.region-tranche-fil a.is-active {
-    color: #2ECC71; /* Vert */
-}
-.region-item.region-point_d_encochage a.is-active {
-    color: #9B59B6; /* Violet */
-}
-
 .map__list a.is-active {
     color: darkcyan; /* La couleur héritée de .region-item (cf plus bas) */
     font-weight: bold;
