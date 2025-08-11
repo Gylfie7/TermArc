@@ -1,0 +1,209 @@
+.map__image {
+    float: left;
+    width: 50%;
+	border-color : red ;
+	border-width : 2px ;
+	/*background-color : black ;*/
+}
+
+/* SVG {
+	width : 100% ;
+}*/
+
+.map__list{
+    float: right;
+    width: 50%;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    /*background-color: #fff; Fond blanc pour que le texte soit visible */
+    position: relative;
+}
+.map__list ul {
+    list-style-type: none;
+    margin-top: 50px;
+    line-height: 25px;
+    padding-top: 10%;
+}
+.map__list a{
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+	font-size: 18px;
+}
+.map__list a.is-active{
+    color: darkcyan;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.region-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 0;
+    font-size: 14px;
+    color: black;
+}
+.region-info.active {
+    max-height: 200px;
+    padding: 8px 0;
+}
+
+/*couleur du texte quand actif*/
+.region-item.region-corde a.is-active {
+    color: ; /* Orange */
+}
+.region-item.region-oeillet a.is-active {
+    color: #3498DB; /* Bleu */
+}
+.region-item.region-tranche-fil a.is-active {
+    color: #2ECC71; /* Vert */
+}
+.region-item.region-point_d_encochage a.is-active {
+    color: #9B59B6; /* Violet */
+}
+
+.map__list a.is-active {
+    color: darkcyan; /* La couleur héritée de .region-item (cf plus bas) */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Les paths SVG ont aussi par défaut une couleur grise légère */
+/*.region {
+    fill: #bbb;
+    stroke: #555;
+    stroke-width: 2px;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    cursor: pointer;
+}*/
+
+/* L'état actif sur le path SVG */
+.region.is-active {
+    filter: brightness(1.1);
+    stroke-width: 3px;
+    stroke: currentColor; /* on prendra la couleur texte */
+}
+
+/* Pour que les paths SVG actifs utilisent la même couleur que le texte lié, on définit la couleur CSS sur le path parent */
+
+/* On applique la couleur via #id dans le SVG ou via une classe associée au path */
+/* Par exemple : */
+
+#carquois.is-active {
+    fill: #E67E22;
+    stroke: #D35400;
+    color: #E67E22; /* couleur "courante" pour stroke avec currentColor */
+}
+#bras_d_arc.is-active {
+    fill: #1E8449;
+    stroke: #2980B9;
+    color: #3498DB;
+}
+#flèches.is-active {
+    fill: #3498DB;
+    stroke: #27AE60;
+    color: #2ECC71;
+}
+#main_de_corde.is-active {
+    fill: red;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#point_d_ancrage.is-active {
+    fill: #2980B9 ;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#oeil_directeur.is-active {
+    fill: #9B59B6;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#main_d_arc.is-active {
+    fill: red;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#plastron.is-active {
+    fill: #9B59B6;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#bras_de_corde.is-active {
+    fill: #1E8449;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#archer1.is-active {
+    fill: #8B5E3C;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#arc.is-active {
+    fill: #4A4A4A;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+
+
+/* Hover style sur liens et paths pour un effet visuel commun */
+.region:hover,
+.map__list a:hover {
+    filter: brightness(0.85);
+}
+
+#carquois{
+		fill: black;
+		stroke: #D35400;
+		color : cyan ;
+}
+#bras_d_arc{
+    fill: #27AE60;
+    stroke: #2980B9;
+    color: #3498DB;
+}
+#flèches{
+    fill: cyan;
+    stroke: #27AE60;
+    color: #2ECC71;
+}
+#main_de_corde{
+    fill: #E67E22;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#arc{
+    fill: black;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#point_d_ancrage{
+    fill: #7F8C8D ;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#oeil_directeur{
+    fill: cyan;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#main_d_arc{
+    fill: #E67E22;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#plastron{
+    fill: #B886D9;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#bras_de_corde{
+    fill: #27AE60;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}
+#archer1{
+    fill: #D9B59B;
+    stroke: #8E44AD;
+    color: #9B59B6;
+}

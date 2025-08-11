@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+    <link rel="stylesheet" href="terrain.css" />
+    <title>Le terrain de tir</title>
+</head>
+<body>
+<div class="map" id="map">
+    <div class="map__image">
+        <!-- Exemple simplifié de SVG avec ids à modifier -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2500 2500">
+            <g id="Terrain">
+				<path id="cibles" class="st3" d="M552,724 h49 v87 h-49 Z M552,905c3.33-6.26-4.3-86,0-86h49c-1.38,28.49,1.85,58.72,0,87-14.02-1.83-35.97,2.89-49-1Z M552,916 h49 v87 h-49 Z M552,1011 h49 v87 h-49 Z M552,1109 h49 v87 h-49 Z M552,1290c3.33-6.26-4.3-86,0-86h49c-1.38,28.49,1.85,58.72,0,87-14.02-1.83-35.97,2.89-49-1Z M601,1396c1.85,28.28-1.38,58.51,0,87h-49c-4.3,0,3.33-79.74,0-86,13.03-3.89,34.98.83,49-1Z M552,1301 h49 v86 h-49 Z"/>
+				<path id="zone_arriere_de_securite" class="st0" d="M550,521 L550,692 L550,905 L550,909 L550,1290 L550,1294 L550,1393 L550,1397 L550,1503 L550,1685 L55,1685 L55,521 L550,521 Z"/>
+				<path id="zone_laterale_de_securite" class="st2" d="M2428,1503h24v182H550v-182c625.98,0,1252.02,0,1878,0Z M550,521h1902v171H550v-171Z"/>
+				<path id="pas_de_tir" class="st1" d="M2428,692 h24 v811 h-24 Z"/>
+				<path id="aire_de_tir" class="st4" d="M2428,692v811c-625.98,0-1252.02,0-1878,0v-106c.62-.11,1.47.16,2,0,3.33,6.26-4.3,86,0,86h49c-1.38-28.49,1.85-58.72,0-87-.01-.16,1.73-2.06,1-2.99-1.61-2.05-45.87-1.18-52-.01v-99c6.13,1.17,50.38,2.03,52-.01.73-.93-1.01-2.83-1-2.99,1.85-28.28-1.38-58.51,0-87h-49c-4.3,0,3.33,79.74,0,86-.53-.16-1.38.11-2,0v-381c6.13,1.17,50.38,2.03,52-.01.73-.93-1.01-2.83-1-2.99,1.85-28.28-1.38-58.51,0-87h-49c-4.3,0,3.33,79.74,0,86-.53-.16-1.38.11-2,0v-213h1878ZM601,724h-49v87h49v-87ZM601,916h-49v87h49v-87ZM601,1011h-49v87h49v-87ZM601,1109h-49v87h49v-87ZM601,1301h-49v86h49v-86Z"/>
+            </g>
+        </svg>
+    </div>
+    <div class="map__list">
+        <ul>
+           <li>
+                <a href="#" id="list-zone_arriere_de_securite">zone arrière de sécurité</a>
+                <div class="region-info"> La zone arrière de sécurité est la partie du terrain située derrière les cibles, destinée à intercepter les flèches qui les dépassent. Elle doit rester dégagée de tout objet pouvant provoquer un rebond. En tir officiel, elle mesure généralement 50 m de long, sauf si une protection verticale suffisamment haute (mur, palissade ou filet) permet de réduire cette distance.</div>
+            </li>
+			<li>
+            <a href="#" id="list-zone_laterale_de_securite">zone latérale de sécurité</a>
+                <div class="region-info">La zone latérale de sécurité est la bande située de chaque côté de l’aire de tir, qui doit rester dégagée pour éviter tout rebond de flèche. Sans protection comme un mur ou un filet, elle doit mesurer 6,25 m de large par côté ; avec protection, 1,25 m suffit.</div>
+            </li>
+            <li>
+                <a href="#" id="list-pas_de_tir">pas de tir</a>
+                <div class="region-info"> Le pas de tir est l’espace de l’aire de tir, marqué au sol par une ligne, où les archers se tiennent perpendiculairement à la cible pour tirer. Il est situé à la distance réglementaire des cibles.</div>
+            </li>
+            <li>
+                <a href="#" id="list-aire_de_tir">aire de tir</a>
+                <div class="region-info"> L’aire de tir est la partie centrale du terrain réservée au tir à l’arc. Sa longueur varie selon le contexte : 18 m en salle, et de 70 à 90 m en extérieur pour les compétitions internationales. Elle est divisée en couloirs d’environ 5 m de large, adaptés au nombre d’archers et à la configuration du site.</div>
+            </li> 
+			<li>
+                <a href="#" id="list-cibles">cibles</a>
+                <div class="region-info">Les cibles sont des supports en paille compressée ou en mousse conçus pour arrêter les flèches. Le blason est le papier coloré accroché sur la cible, avec des formes et tailles adaptées à la distance et à la discipline.</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
