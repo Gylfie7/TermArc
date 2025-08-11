@@ -47,4 +47,12 @@
 </div>
 <script src="app.js"></script>
 </body>
+<script>
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ type: 'setHeight', height: height }, '*');
+  }
+  window.onload = sendHeight;
+  window.onresize = sendHeight;
+</script>
 </html>
